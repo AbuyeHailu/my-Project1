@@ -1,0 +1,20 @@
+name: My Workflow
+
+on:
+  push: # Trigger on push events to the main branch
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest # Specify the runner environment
+    steps:
+      - uses: actions/checkout@v3 # Checkout your code
+      - name: Setup environment # Install dependencies (e.g., `npm install`)
+        run: |
+          # Add your setup commands here
+      - name: Build your project # Run your build command
+        run: |
+          # Add your build commands here
+      - name: Run tests # Execute your tests
+        run: |
+          # Add your test commands here
